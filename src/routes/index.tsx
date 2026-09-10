@@ -345,18 +345,20 @@ function Home() {
       </section>
 
       {/* FULL WIDTH PARALLAX */}
-      <section ref={parallaxRef} className="relative h-[85svh] overflow-hidden bg-cocoa">
-        <motion.img
-          style={{ y: imgY }}
-          src={IMG.barn}
-          alt="Red roadside dairy barn ice cream stand"
-          loading="lazy"
-          className="absolute inset-0 h-[124%] w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-charcoal/35" />
+      <section ref={parallaxRef} className="relative flex min-h-[70svh] items-center justify-center overflow-hidden bg-cocoa px-5 py-20">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <motion.img
+            style={{ y: imgY }}
+            src={IMG.barn}
+            alt="Red roadside dairy barn ice cream stand"
+            loading="lazy"
+            className="h-full w-full object-cover"
+          />
+        </div>
+        <div className="absolute inset-0 bg-charcoal/40" />
         <motion.h2
           style={{ y: textY }}
-          className="hero-type absolute inset-x-0 top-1/2 z-10 -translate-y-1/2 px-5 text-center text-[13vw] leading-[0.85] text-cream mix-blend-exclusion sm:px-8 lg:text-[8vw]"
+          className="hero-type relative z-10 px-5 text-center text-[13vw] leading-[0.85] text-cream sm:px-8 lg:text-[8vw]"
         >
           GOOD FOOD
           <br />

@@ -1,13 +1,13 @@
-import softServe from "@/assets/soft-serve-hero.jpg";
-import poutine from "@/assets/poutine.jpg";
-import burger from "@/assets/burger.jpg";
-import milkshake from "@/assets/milkshake.jpg";
+import softServe from "@/assets/2.jpg";
+import poutine from "@/assets/1.jpg";
+import burger from "@/assets/5.jpg";
+import milkshake from "@/assets/4.jpg";
 import fries from "@/assets/fries.jpg";
 import hotdog from "@/assets/hotdog.jpg";
-import sundae from "@/assets/sundae.jpg";
-import drinks from "@/assets/drinks.jpg";
-import barn from "@/assets/barn-stand.jpg";
-import people from "@/assets/people-cones.jpg";
+import sundae from "@/assets/3.jpg";
+import drinks from "@/assets/home2.jpg";
+import barn from "@/assets/6.jpeg";
+import people from "@/assets/home.jpg";
 
 export const IMG = {
   softServe,

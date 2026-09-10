@@ -7,7 +7,9 @@ import { ContactCard } from "@/components/site/ContactCard";
 import { FAQ } from "@/components/site/FAQ";
 import { ImageReveal } from "@/components/site/ImageReveal";
 import { SectionHeading } from "@/components/site/SectionHeading";
+import { MagneticButton } from "@/components/site/MagneticButton";
 import { CONTACT, IMG } from "@/lib/site-data";
+import contactImage from "@/assets/home2.jpg";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -42,26 +44,104 @@ function Contact() {
       <section className="grain relative overflow-hidden bg-cream px-5 pt-36 pb-14 sm:px-8">
         <div className="pointer-events-none absolute -right-24 top-24 size-[26rem] rounded-[45%_55%_60%_40%] bg-fresh/40" />
         <div className="relative z-10 mx-auto max-w-7xl">
-          <h1 className="hero-type text-[18vw] leading-[0.82] lg:text-[11vw]">
-            {["COME SAY", "HELLO."].map((line, i) => (
-              <span key={line} className="block overflow-hidden">
-                <motion.span
-                  className="block"
-                  initial={{ y: "110%" }}
-                  animate={{ y: 0 }}
-                  transition={{ duration: 0.9, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+            {/* IMAGE SIDE */}
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              className="relative aspect-[3/4] overflow-hidden rounded-[2.5rem] lg:aspect-[4/5]"
+            >
+              <img
+                src={contactImage}
+                alt="Kemptville Dairy Barn roadside food stand"
+                loading="lazy"
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-charcoal/40 to-transparent" />
+              
+              {/* Floating badge */}
+              <motion.div
+                initial={{ scale: 0, rotate: -12 }}
+                animate={{ scale: 1, rotate: -6 }}
+                transition={{ duration: 0.6, delay: 0.3, type: "spring" }}
+                className="grain absolute left-6 bottom-6 rounded-2xl bg-fresh px-6 py-3 shadow-xl"
+              >
+                <p className="font-display text-sm font-bold tracking-[0.2em] text-charcoal">
+                  OPEN DAILY
+                </p>
+              </motion.div>
+            </motion.div>
+
+            {/* CONTENT SIDE */}
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+            >
+              <motion.span
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="font-display text-sm font-bold tracking-[0.3em] text-tomato"
+              >
+                GET IN TOUCH
+              </motion.span>
+              
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="hero-type mt-4 text-[12vw] leading-[0.9] text-charcoal sm:text-6xl lg:text-7xl"
+              >
+                COME SAY
+                <br />
+                <span className="text-tomato">HELLO.</span>
+              </motion.h1>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                className="mt-8 space-y-6 text-lg leading-relaxed text-charcoal/80"
+              >
+                <p>
+                  Find us at <strong>{CONTACT.street}, {CONTACT.city}</strong>. 
+                  We're open 7 days a week, ready to serve you soft serve, 
+                  burgers, and all your roadside favourites.
+                </p>
+                <p>
+                  Call us at <strong>{CONTACT.phone}</strong> or stop by — 
+                  we're always happy to see you at the barn.
+                </p>
+                <p className="font-display font-bold text-fresh">
+                  {CONTACT.days} · {CONTACT.hours}
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                className="mt-10 flex gap-4"
+              >
+                <a
+                  href={CONTACT.googleMapsLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-tomato px-6 py-4 font-display text-sm font-bold tracking-[0.2em] text-cream transition-colors hover:bg-barn"
                 >
-                  {i === 1 ? <span className="text-tomato">{line}</span> : line}
-                </motion.span>
-              </span>
-            ))}
-          </h1>
-          <ImageReveal
-            src={IMG.barn}
-            alt="Kemptville Dairy Barn roadside food stand"
-            className="mt-12 aspect-[16/9] w-full"
-            priority
-          />
+                  <Navigation className="size-4" /> GET DIRECTIONS
+                </a>
+                <a
+                  href={CONTACT.phoneHref}
+                  className="inline-flex items-center gap-2 rounded-full border-2 border-tomato px-6 py-4 font-display text-sm font-bold tracking-[0.2em] text-tomato transition-colors hover:bg-tomato hover:text-cream"
+                >
+                  <Phone className="size-4" /> CALL NOW
+                </a>
+              </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
 

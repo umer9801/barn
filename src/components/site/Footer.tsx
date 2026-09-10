@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { motion } from "motion/react";
 import { Facebook, Instagram, MapPin, Phone } from "lucide-react";
 import { CONTACT } from "@/lib/site-data";
+import logo from "@/assets/logo.png";
 
 export function Footer() {
   return (
@@ -25,6 +26,9 @@ export function Footer() {
 
         <div className="mt-16 grid gap-10 border-t border-cream/20 pt-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
+            <div className="mb-6 inline-block rounded-xl bg-cream p-3 shadow-md">
+              <img src={logo} alt="Kemptville Dairy Barn" className="h-16 w-auto" />
+            </div>
             <p className="font-display text-[11px] tracking-[0.3em] opacity-60">NAVIGATE</p>
             <ul className="mt-4 space-y-2 font-display text-xl">
               {[

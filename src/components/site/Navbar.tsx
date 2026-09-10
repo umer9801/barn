@@ -5,6 +5,7 @@ import { useState } from "react";
 import { MobileMenu } from "./MobileMenu";
 import { CONTACT } from "@/lib/site-data";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/logo.png";
 
 const LINKS = [
   { label: "HOME", to: "/" },
@@ -34,10 +35,15 @@ export function Navbar() {
               : "max-w-7xl bg-transparent px-2 py-3 sm:px-4",
           )}
         >
-          <Link to="/" className="font-display text-[11px] leading-[0.95] font-bold tracking-[0.2em] sm:text-xs">
-            KEMPTVILLE
-            <br />
-            <span className="text-tomato">DAIRY BARN</span>
+          <Link to="/" className="flex items-center gap-3">
+            <div className="rounded-xl bg-cream p-2 shadow-sm">
+              <img src={logo} alt="Kemptville Dairy Barn" className="h-10 w-auto sm:h-12" />
+            </div>
+            <span className="font-display text-[11px] leading-[0.95] font-bold tracking-[0.2em] sm:text-xs">
+              KEMPTVILLE
+              <br />
+              <span className="text-tomato">DAIRY BARN</span>
+            </span>
           </Link>
 
           <nav className="hidden items-center gap-8 md:flex">

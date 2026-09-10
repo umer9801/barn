@@ -6,6 +6,18 @@ import { ImageReveal } from "@/components/site/ImageReveal";
 import { MagneticButton } from "@/components/site/MagneticButton";
 import { Marquee } from "@/components/site/Marquee";
 import { IMG } from "@/lib/site-data";
+import aboutImage from "@/assets/about.jpg";
+import img1 from "@/assets/1.jpg";
+import img2 from "@/assets/2.jpg";
+import img3 from "@/assets/3.jpg";
+import img4 from "@/assets/4.jpg";
+import img5 from "@/assets/5.jpg";
+import img6 from "@/assets/6.jpeg";
+import homeImg from "@/assets/home.jpg";
+import home2Img from "@/assets/home2.jpg";
+import friesImg from "@/assets/fries.jpg";
+import hotdogImg from "@/assets/hotdog.jpg";
+import milkshakeImg from "@/assets/milkshake.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -39,10 +51,18 @@ const STATS = [
 ];
 
 const POLAROIDS = [
-  { src: IMG.people, rot: "-6deg" },
-  { src: IMG.softServe, rot: "4deg" },
-  { src: IMG.poutine, rot: "-3deg" },
-  { src: IMG.barn, rot: "5deg" },
+  { src: homeImg, rot: "-6deg" },
+  { src: img2, rot: "4deg" },
+  { src: img1, rot: "-3deg" },
+  { src: aboutImage, rot: "5deg" },
+  { src: img3, rot: "-4deg" },
+  { src: img4, rot: "6deg" },
+  { src: img5, rot: "-5deg" },
+  { src: img6, rot: "3deg" },
+  { src: home2Img, rot: "-7deg" },
+  { src: friesImg, rot: "4deg" },
+  { src: hotdogImg, rot: "-2deg" },
+  { src: milkshakeImg, rot: "5deg" },
 ];
 
 function About() {
@@ -52,26 +72,95 @@ function About() {
       <section className="grain relative overflow-hidden bg-cream px-5 pt-36 pb-16 sm:px-8">
         <div className="pointer-events-none absolute -top-24 right-0 size-[30rem] rounded-full bg-sunny/60" />
         <div className="relative z-10 mx-auto max-w-7xl">
-          <h1 className="hero-type text-[16vw] leading-[0.82] lg:text-[10vw]">
-            {["NOT JUST", "A FOOD STOP."].map((line, i) => (
-              <span key={line} className="block overflow-hidden">
-                <motion.span
-                  className="block"
-                  initial={{ y: "110%" }}
-                  animate={{ y: 0 }}
-                  transition={{ duration: 0.9, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-                >
-                  {i === 1 ? <span className="text-tomato">{line}</span> : line}
-                </motion.span>
-              </span>
-            ))}
-          </h1>
-          <ImageReveal
-            src={IMG.barn}
-            alt="Red roadside dairy barn food stand at golden hour"
-            className="mt-12 aspect-[16/9] w-full"
-            priority
-          />
+          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+            {/* IMAGE SIDE */}
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              className="relative aspect-[3/4] overflow-hidden rounded-[2.5rem] lg:aspect-[4/5]"
+            >
+              <img
+                src={aboutImage}
+                alt="Red roadside dairy barn food stand at golden hour"
+                loading="lazy"
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-charcoal/40 to-transparent" />
+              
+              {/* Floating badge */}
+              <motion.div
+                initial={{ scale: 0, rotate: -12 }}
+                animate={{ scale: 1, rotate: -6 }}
+                transition={{ duration: 0.6, delay: 0.3, type: "spring" }}
+                className="grain absolute left-6 bottom-6 rounded-2xl bg-tomato px-6 py-3 shadow-xl"
+              >
+                <p className="font-display text-sm font-bold tracking-[0.2em] text-cream">
+                  EST. 1990
+                </p>
+              </motion.div>
+            </motion.div>
+
+            {/* CONTENT SIDE */}
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+            >
+              <motion.span
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="font-display text-sm font-bold tracking-[0.3em] text-tomato"
+              >
+                OUR STORY
+              </motion.span>
+              
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="hero-type mt-4 text-[12vw] leading-[0.9] text-charcoal sm:text-6xl lg:text-7xl"
+              >
+                NOT JUST
+                <br />
+                A FOOD
+                <br />
+                <span className="text-tomato">STOP.</span>
+              </motion.h1>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                className="mt-8 space-y-6 text-lg leading-relaxed text-charcoal/80"
+              >
+                <p>
+                  What started as a simple roadside stand has grown into something special — 
+                  a place where summer memories are made, families gather, and the ice cream 
+                  always tastes a little better.
+                </p>
+                <p>
+                  For over 30 years, we've been serving Kemptville with fresh food, cold treats, 
+                  and that warm feeling you only get at a real roadside dairy barn.
+                </p>
+                <p className="font-display font-bold text-tomato">
+                  This is our story. This is your place.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                className="mt-10"
+              >
+                <MagneticButton to="/menu" variant="tomato">
+                  See Our Menu
+                </MagneticButton>
+              </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
