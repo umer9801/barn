@@ -32,28 +32,10 @@ export function SignatureFoodCard({ n, name, price, blurb, image, active, onHove
         loading="lazy"
         className={cn(
           "absolute inset-0 h-full w-full object-cover transition-all duration-[900ms]",
-          active ? "scale-100 opacity-95" : "scale-110 opacity-50 grayscale-[35%]",
+          active ? "scale-100 opacity-100" : "scale-105 opacity-80",
         )}
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent" />
-      <div className="relative z-10 flex h-full flex-col justify-between p-6 text-cream">
-        <span className="font-display text-sm tracking-[0.3em]">{n}</span>
-        <div>
-          <h3 className="hero-type text-[8vw] leading-[0.85] sm:text-[3.4vw] lg:text-[2.4vw]">
-            {name}
-          </h3>
-          <motion.div
-            animate={{ opacity: active ? 1 : 0, y: active ? 0 : 14 }}
-            transition={{ duration: 0.4 }}
-            className="mt-3 flex items-center gap-4"
-          >
-            <span className="rounded-full bg-sunny px-4 py-2 font-display text-sm font-bold text-cocoa">
-              {price}
-            </span>
-            <span className="text-sm opacity-80">{blurb}</span>
-          </motion.div>
-        </div>
-      </div>
+      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/30 via-transparent to-transparent" />
     </motion.div>
   );
 }
