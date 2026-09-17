@@ -93,7 +93,7 @@ function About() {
                 initial={{ scale: 0, rotate: -12 }}
                 animate={{ scale: 1, rotate: -6 }}
                 transition={{ duration: 0.6, delay: 0.3, type: "spring" }}
-                className="grain absolute left-6 bottom-6 rounded-2xl bg-tomato px-6 py-3 shadow-xl"
+                className="grain absolute left-6 bottom-6 rounded-2xl bg-fresh px-6 py-3 shadow-xl"
               >
                 <p className="font-display text-sm font-bold tracking-[0.2em] text-cream">
                   EST. 1990
@@ -111,7 +111,7 @@ function About() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                className="font-display text-sm font-bold tracking-[0.3em] text-tomato"
+                className="font-display text-sm font-bold tracking-[0.3em] text-fresh"
               >
                 OUR STORY
               </motion.span>
@@ -126,7 +126,7 @@ function About() {
                 <br />
                 A FOOD
                 <br />
-                <span className="text-tomato">STOP.</span>
+                <span className="text-fresh">STOP.</span>
               </motion.h1>
 
               <motion.div
@@ -144,7 +144,7 @@ function About() {
                   For over 30 years, we've been serving Kemptville with fresh food, cold treats, 
                   and that warm feeling you only get at a real roadside dairy barn.
                 </p>
-                <p className="font-display font-bold text-tomato">
+                <p className="font-display font-bold text-fresh">
                   This is our story. This is your place.
                 </p>
               </motion.div>
@@ -167,33 +167,128 @@ function About() {
       {/* TIMELINE */}
       <section className="bg-cream px-5 py-24 sm:px-8 lg:py-32">
         <div className="mx-auto max-w-7xl">
-          <SectionHeading eyebrow="Our story" lines={["THE LONG", "WAY ROUND."]} />
-          <div className="mt-16 space-y-4">
-            {TIMELINE.map((t, i) => (
-              <motion.div
-                key={t.year}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-80px" }}
-                transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-                className="grid gap-5 border-t-2 border-charcoal/15 pt-8 lg:grid-cols-[10rem_1fr_22rem]"
-              >
-                <span className="font-display text-2xl font-bold text-tomato">{t.year}</span>
-                <h3 className="hero-type text-[10vw] leading-[0.85] sm:text-[5vw] lg:text-[3.4vw]">
-                  {t.title}
-                </h3>
-                <p className="text-lg text-muted-foreground">{t.text}</p>
-                {i < TIMELINE.length - 1 ? (
-                  <span className="font-display text-3xl text-charcoal/25">↓</span>
-                ) : null}
-              </motion.div>
-            ))}
+          <div className="mb-16 text-center">
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="font-display text-sm font-bold tracking-[0.3em] text-fresh"
+            >
+              A TRADITION SERVED FOR GENERATIONS
+            </motion.span>
+            
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="hero-type mt-6 text-[10vw] leading-[0.9] text-charcoal sm:text-6xl lg:text-7xl"
+            >
+              MORE THAN
+              <br />
+              JUST A PLACE.
+            </motion.h2>
+          </div>
+
+          {/* TRADITION CONTENT - IN SMALL SECTIONS */}
+          <div className="mx-auto max-w-4xl space-y-12">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="rounded-3xl border-2 border-fresh/20 bg-warm p-8 sm:p-10"
+            >
+              <p className="text-lg leading-relaxed text-charcoal/80 italic">
+                "For generations, Dairy Barn & Grill has been more than just a place to enjoy 
+                great food and delicious ice cream—it has been a part of the community."
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="rounded-3xl border-2 border-tomato/20 bg-warm p-8 sm:p-10"
+            >
+              <h3 className="font-display text-xl font-bold mb-4 text-tomato">
+                WHERE MEMORIES BEGIN
+              </h3>
+              <p className="text-lg leading-relaxed text-charcoal/80">
+                For many families, Dairy Barn is where childhood memories began: sharing a meal, 
+                enjoying a favourite ice cream, and spending time together. Parents who grew up 
+                coming here have now brought their children and grandchildren, creating a tradition 
+                that continues from one generation to the next.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="rounded-3xl border-2 border-sunny/30 bg-warm p-8 sm:p-10"
+            >
+              <h3 className="font-display text-xl font-bold mb-4 text-cocoa">
+                OUR VALUES
+              </h3>
+              <p className="text-lg leading-relaxed text-charcoal/80">
+                We take great pride in preserving the values that have made Dairy Barn & Grill 
+                a beloved local tradition—quality food, delicious ice cream, friendly service, 
+                and a commitment to the highest standards of cleanliness and care.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="rounded-3xl border-2 border-fresh/20 bg-warm p-8 sm:p-10"
+            >
+              <p className="text-lg leading-relaxed text-charcoal/80 mb-6">
+                Through the years, times may have changed, but our passion for serving our 
+                community has remained the same. Dairy Barn & Grill is a place where great 
+                food meets cherished memories, and where every generation has a story to share.
+              </p>
+              <p className="font-display text-xl font-bold text-fresh text-center py-4 border-t-2 border-fresh/30">
+                "Thank you for being part of our story—and for helping us keep the tradition alive."
+              </p>
+            </motion.div>
+          </div>
+
+          {/* TIMELINE - JOURNEY */}
+          <div className="mt-24">
+            <SectionHeading eyebrow="Our Journey" lines={["THE LONG", "WAY ROUND."]} />
+            <div className="mt-16 space-y-4">
+              {TIMELINE.map((t, i) => (
+                <motion.div
+                  key={t.year}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-80px" }}
+                  transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+                  className="grid gap-5 border-t-2 border-charcoal/15 pt-8 lg:grid-cols-[10rem_1fr_22rem]"
+                >
+                  <span className="font-display text-2xl font-bold text-fresh">{t.year}</span>
+                  <h3 className="hero-type text-[10vw] leading-[0.85] sm:text-[5vw] lg:text-[3.4vw]">
+                    {t.title}
+                  </h3>
+                  <p className="text-lg text-muted-foreground">{t.text}</p>
+                  {i < TIMELINE.length - 1 ? (
+                    <span className="font-display text-3xl text-charcoal/25">↓</span>
+                  ) : null}
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* STATEMENT */}
-      <section className="grain relative overflow-hidden bg-tomato px-5 py-28 text-cream sm:px-8">
+      <section className="grain relative overflow-hidden bg-fresh px-5 py-28 text-cream sm:px-8">
         <motion.img
           src={IMG.fries}
           alt=""
@@ -229,7 +324,7 @@ function About() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
             >
-              <p className="hero-type text-[18vw] leading-[0.8] text-tomato sm:text-[7vw]">{s.n}</p>
+              <p className="hero-type text-[18vw] leading-[0.8] text-fresh sm:text-[7vw]">{s.n}</p>
               <p className="mt-3 font-display text-xs font-bold tracking-[0.3em]">{s.label}</p>
             </motion.div>
           ))}
@@ -269,7 +364,7 @@ function About() {
         <h2 className="hero-type text-[15vw] leading-[0.85] lg:text-[8vw]">
           COME HUNGRY.
           <br />
-          <span className="text-tomato">LEAVE HAPPY.</span>
+          <span className="text-fresh">LEAVE HAPPY.</span>
         </h2>
         <div className="mt-10">
           <MagneticButton to="/menu">View the menu</MagneticButton>
