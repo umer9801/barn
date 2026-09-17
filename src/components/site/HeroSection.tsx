@@ -50,8 +50,8 @@ export function HeroSection() {
             KEMPTVILLE, ONTARIO · ROADSIDE SINCE FOREVER
           </motion.p>
 
-          <h1 className="hero-type text-[15vw] leading-[0.82] sm:text-[11vw] lg:text-[6.6vw]">
-            {["ICE CREAM.", "BURGERS.", "GOOD TIMES."].map((line, i) => (
+          <h1 className="hero-type text-[12vw] leading-[0.88] sm:text-[9vw] lg:text-[5.2vw]">
+            {["SCOOPS OF", "HAPPINESS,", "ONE CONE", "AT A TIME."].map((line, i) => (
               <span key={line} className="block overflow-hidden">
                 <motion.span
                   className="block"
@@ -59,25 +59,30 @@ export function HeroSection() {
                   animate={{ y: 0 }}
                   transition={{ duration: 0.9, delay: 0.15 + i * 0.1, ease: [0.22, 1, 0.36, 1] }}
                 >
-                  {i === 2 ? <span className="text-tomato">{line}</span> : line}
+                  {i === 3 ? <span className="text-fresh">{line}</span> : line}
                 </motion.span>
               </span>
             ))}
           </h1>
 
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.55 }}
-            className="mt-7 max-w-md text-lg leading-relaxed text-muted-foreground"
+            transition={{ delay: 0.5 }}
+            className="mt-7 max-w-lg space-y-3"
           >
-            Fresh soft serve, loaded poutine, juicy burgers, and all your roadside favourites.
-          </motion.p>
+            <p className="text-lg font-display font-bold italic text-charcoal/90 border-l-4 border-fresh pl-4">
+              "Where every meal is made fresh, and every visit feels like home."
+            </p>
+            <p className="text-base leading-relaxed text-muted-foreground pl-4">
+              Fresh soft serve, loaded poutine, juicy burgers, and all your roadside favourites.
+            </p>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.68 }}
+            transition={{ delay: 0.65 }}
             className="mt-9 flex flex-wrap gap-3"
           >
             <MagneticButton to="/menu">
