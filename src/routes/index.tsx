@@ -47,10 +47,10 @@ function Home() {
       <HeroSection />
 
       {/* MARQUEE */}
-      <div className="grain bg-fresh text-cream">
+      <div className="grain bg-tomato text-cream">
         <Marquee items={MARQUEE} duration={34} />
       </div>
-      <div className="grain border-y-2 border-charcoal/10 bg-sunny text-cocoa">
+      <div className="grain border-y-2 border-charcoal/10 bg-cream text-charcoal">
         <Marquee items={MARQUEE} duration={40} reverse />
       </div>
 
@@ -66,7 +66,7 @@ function Home() {
           
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             <ContentCard
-              icon={<Sparkles className="size-10 text-fresh" strokeWidth={2.5} />}
+              icon={<Sparkles className="size-10 text-tomato" strokeWidth={2.5} />}
               title="FRESH DAILY"
               description={`"Everything made fresh, every single day. You can taste the difference." — That's our promise.`}
               variant="cream"
@@ -77,7 +77,7 @@ function Home() {
               icon={<Users className="size-10 text-cream" strokeWidth={2.5} />}
               title="GENERATIONS GATHER"
               description={`"I brought my kids here. Now they bring theirs." — Where memories become traditions.`}
-              variant="fresh"
+              variant="tomato"
               delay={0.08}
             />
             
@@ -108,7 +108,7 @@ function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="font-display text-sm font-bold tracking-[0.3em] text-fresh"
+            className="font-display text-sm font-bold tracking-[0.3em] text-tomato"
           >
             A TRADITION SERVED FOR GENERATIONS
           </motion.span>
@@ -132,7 +132,7 @@ function Home() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mx-auto mt-10 max-w-3xl space-y-6 text-lg leading-relaxed text-charcoal/80"
           >
-            <p className="italic border-l-4 border-fresh pl-6 text-xl">
+            <p className="italic border-l-4 border-tomato pl-6 text-xl">
               "For generations, Dairy Barn & Grill has been more than just a place to enjoy great food—
               it has been a part of the community, a keeper of memories."
             </p>
@@ -152,7 +152,7 @@ function Home() {
               has remained the same. Dairy Barn & Grill is where great food meets cherished memories, 
               and where every generation has a story to share.
             </p>
-            <p className="font-display text-xl text-fresh">
+            <p className="font-display text-xl text-tomato">
               Thank you for being part of our story—and for helping us keep the tradition alive.
             </p>
           </motion.div>
@@ -192,9 +192,9 @@ function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="rounded-3xl bg-cream p-8 border-2 border-fresh/20"
+              className="rounded-3xl bg-cream p-8 border-2 border-tomato/20"
             >
-              <div className="mb-4 inline-block rounded-full bg-fresh px-4 py-2">
+              <div className="mb-4 inline-block rounded-full bg-tomato px-4 py-2">
                 <span className="font-display text-xs font-bold tracking-[0.2em] text-cream">01</span>
               </div>
               <h3 className="hero-type mb-4 text-3xl text-charcoal">
@@ -265,7 +265,7 @@ function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="font-display text-sm font-bold tracking-[0.3em] text-fresh"
+              className="font-display text-sm font-bold tracking-[0.3em] text-tomato"
             >
               WHAT OUR COMMUNITY SAYS
             </motion.span>
@@ -289,7 +289,7 @@ function Home() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="grain rounded-3xl border-2 border-fresh/30 bg-warm p-8"
+              className="grain rounded-3xl border-2 border-tomato/30 bg-warm p-8"
             >
               <div className="mb-4 flex gap-1">
                 {[...Array(5)].map((_, i) => (
@@ -300,7 +300,7 @@ function Home() {
                 "Best soft serve in the region! My kids literally beg me to come here every weekend. 
                 The loaded poutine is unreal too—I can't resist it myself!"
               </p>
-              <p className="font-display text-sm font-bold tracking-wider text-fresh">
+              <p className="font-display text-sm font-bold tracking-wider text-tomato">
                 — Sarah M., Kemptville
               </p>
             </motion.div>
@@ -403,21 +403,21 @@ function Home() {
             <ContentCard
               title="ICE CREAM & SHAKES"
               description={`"Soft serve swirled high, thick milkshakes you need a spoon for." — The reason families drive from miles away.`}
-              variant="sunny"
+              variant="cream"
               delay={0}
             />
             
             <ContentCard
               title="BURGERS & DOGS"
               description={`"Smashed patties, melted cheese, grilled to perfection." — Classic roadside done right, every single time.`}
-              variant="fresh"
+              variant="tomato"
               delay={0.08}
             />
             
             <ContentCard
               title="POUTINE & FRIES"
               description={`"Fresh-cut fries, double fried to golden perfection." — Add gravy and curds for the ultimate loaded experience.`}
-              variant="tomato"
+              variant="sunny"
               delay={0.16}
             />
           </div>

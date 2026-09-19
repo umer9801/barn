@@ -59,7 +59,7 @@ export function HeroSection() {
                   animate={{ y: 0 }}
                   transition={{ duration: 0.9, delay: 0.15 + i * 0.1, ease: [0.22, 1, 0.36, 1] }}
                 >
-                  {i === 3 ? <span className="text-fresh">{line}</span> : line}
+                  {i === 3 ? <span className="text-cream drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">{line}</span> : line}
                 </motion.span>
               </span>
             ))}
@@ -71,7 +71,7 @@ export function HeroSection() {
             transition={{ delay: 0.5 }}
             className="mt-7 max-w-lg space-y-3"
           >
-            <p className="text-lg font-display font-bold italic text-charcoal/90 border-l-4 border-fresh pl-4">
+            <p className="text-lg font-display font-bold italic text-charcoal/90 border-l-4 border-tomato pl-4">
               "Where every meal is made fresh, and every visit feels like home."
             </p>
             <p className="text-base leading-relaxed text-muted-foreground pl-4">
@@ -121,7 +121,7 @@ export function HeroSection() {
           />
           <motion.div
             {...float(0.8, 14)}
-            className="absolute top-1/2 -left-10 z-20 hidden rounded-full bg-fresh px-5 py-3 font-display text-xs font-bold tracking-[0.2em] text-cream sm:block"
+            className="absolute top-1/2 -left-10 z-20 hidden rounded-full bg-tomato px-5 py-3 font-display text-xs font-bold tracking-[0.2em] text-cream sm:block"
           >
             FRESH DAILY
           </motion.div>

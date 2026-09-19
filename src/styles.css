@@ -56,16 +56,15 @@
 :root {
   --radius: 1.25rem;
 
-  /* Fresh modern palette - vibrant blues, mint greens, coral pink */
-  --cream: oklch(0.985 0.012 85);
-  --warm: oklch(0.97 0.015 90);
-  --tomato: oklch(0.62 0.19 15); /* Coral pink - warm and inviting */
-  --barn: oklch(0.55 0.22 25); /* Deep coral */
-  --sunny: oklch(0.88 0.18 105); /* Bright mint green */
-  --golden: oklch(0.75 0.14 95); /* Soft mint gold */
-  --fresh: oklch(0.65 0.15 180); /* Sky blue - fresh and clean */
-  --cocoa: oklch(0.35 0.06 250); /* Deep navy blue */
-  --charcoal: oklch(0.25 0.02 260); /* Blue-black */
+  --cream: oklch(0.978 0.017 75);
+  --warm: oklch(0.993 0.007 85);
+  --tomato: oklch(0.556 0.208 27.2);
+  --barn: oklch(0.445 0.185 28);
+  --sunny: oklch(0.845 0.144 82);
+  --golden: oklch(0.769 0.163 70);
+  --fresh: oklch(0.667 0.083 148);
+  --cocoa: oklch(0.312 0.048 30);
+  --charcoal: oklch(0.205 0 0);
 
   --background: var(--cream);
   --foreground: var(--charcoal);
@@ -73,19 +72,19 @@
   --card-foreground: var(--charcoal);
   --popover: var(--warm);
   --popover-foreground: var(--charcoal);
-  --primary: var(--fresh); /* Sky blue as primary */
+  --primary: var(--tomato);
   --primary-foreground: var(--cream);
-  --secondary: var(--sunny); /* Mint green secondary */
+  --secondary: var(--sunny);
   --secondary-foreground: var(--cocoa);
-  --muted: oklch(0.95 0.01 85);
-  --muted-foreground: oklch(0.50 0.03 260);
-  --accent: var(--tomato); /* Coral accent */
-  --accent-foreground: var(--cream);
+  --muted: oklch(0.945 0.02 78);
+  --muted-foreground: oklch(0.48 0.03 40);
+  --accent: var(--golden);
+  --accent-foreground: var(--charcoal);
   --destructive: var(--barn);
   --destructive-foreground: var(--cream);
-  --border: oklch(0.90 0.015 85);
-  --input: oklch(0.90 0.015 85);
-  --ring: var(--fresh);
+  --border: oklch(0.89 0.025 70);
+  --input: oklch(0.89 0.025 70);
+  --ring: var(--tomato);
 }
 
 @layer base {

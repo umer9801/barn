@@ -42,7 +42,7 @@ export function Navbar() {
             <span className="font-display text-[11px] leading-[0.95] font-bold tracking-[0.2em] sm:text-xs">
               KEMPTVILLE
               <br />
-              <span className="text-tomato">DAIRY BARN</span>
+              <span className="text-fresh">DAIRY BARN</span>
             </span>
           </Link>
 
@@ -56,7 +56,7 @@ export function Navbar() {
                 {l.label}
                 <span
                   className={cn(
-                    "absolute -bottom-1 left-0 h-[2px] bg-tomato transition-all duration-300 group-hover:w-full",
+                    "absolute -bottom-1 left-0 h-[2px] bg-fresh transition-all duration-300 group-hover:w-full",
                     pathname === l.to ? "w-full" : "w-0",
                   )}
                 />
@@ -67,7 +67,7 @@ export function Navbar() {
           <div className="flex items-center gap-2">
             <a
               href={CONTACT.phoneHref}
-              className="hidden items-center gap-2 rounded-full bg-tomato px-5 py-3 font-display text-[11px] font-bold tracking-[0.2em] text-cream transition-colors hover:bg-barn sm:flex"
+              className="hidden items-center gap-2 rounded-full bg-fresh px-5 py-3 font-display text-[11px] font-bold tracking-[0.2em] text-cream transition-colors hover:bg-fresh/80 sm:flex"
             >
               <Phone className="size-4" /> CALL NOW
             </a>
@@ -87,7 +87,7 @@ export function Navbar() {
       {/* Mobile sticky call CTA */}
       <a
         href={CONTACT.phoneHref}
-        className="fixed right-4 bottom-5 z-40 flex items-center gap-2 rounded-full bg-tomato px-5 py-4 font-display text-xs font-bold tracking-[0.2em] text-cream shadow-[0_16px_40px_-16px_rgba(0,0,0,0.6)] md:hidden"
+        className="fixed right-4 bottom-5 z-40 flex items-center gap-2 rounded-full bg-fresh px-5 py-4 font-display text-xs font-bold tracking-[0.2em] text-cream shadow-[0_16px_40px_-16px_rgba(0,0,0,0.6)] md:hidden"
       >
         <Phone className="size-4" /> CALL
       </a>

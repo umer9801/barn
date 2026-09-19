@@ -36,24 +36,18 @@ export function TextMenuSection({ category, items }: TextMenuSectionProps) {
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: index * 0.05 }}
             whileHover={{ x: 8, transition: { duration: 0.2 } }}
-            className="group flex items-start justify-between border-b border-charcoal/10 pb-4 transition-all hover:border-tomato/30"
+            className="group border-b border-charcoal/10 pb-4 transition-all hover:border-tomato/30"
           >
             <div className="flex-1">
               <h3 className="font-display text-xl font-bold text-charcoal transition-colors group-hover:text-tomato">
                 {item.name}
               </h3>
               {item.desc && (
-                <p className="mt-1 text-sm leading-relaxed text-charcoal/70">
+                <p className="mt-1 text-base leading-relaxed text-charcoal/70">
                   {item.desc}
                 </p>
               )}
             </div>
-            <motion.span
-              whileHover={{ scale: 1.1 }}
-              className="ml-6 font-display text-2xl font-bold text-tomato"
-            >
-              {item.price}
-            </motion.span>
           </motion.div>
         ))}
       </div>

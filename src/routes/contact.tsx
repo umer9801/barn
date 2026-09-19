@@ -42,7 +42,7 @@ function Contact() {
   return (
     <PageShell>
       <section className="grain relative overflow-hidden bg-cream px-5 pt-36 pb-14 sm:px-8">
-        <div className="pointer-events-none absolute -right-24 top-24 size-[26rem] rounded-[45%_55%_60%_40%] bg-fresh/40" />
+        <div className="pointer-events-none absolute -right-24 top-24 size-[26rem] rounded-[45%_55%_60%_40%] bg-sunny/40" />
         <div className="relative z-10 mx-auto max-w-7xl">
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
             {/* IMAGE SIDE */}
@@ -65,7 +65,7 @@ function Contact() {
                 initial={{ scale: 0, rotate: -12 }}
                 animate={{ scale: 1, rotate: -6 }}
                 transition={{ duration: 0.6, delay: 0.3, type: "spring" }}
-                className="grain absolute left-6 bottom-6 rounded-2xl bg-fresh px-6 py-3 shadow-xl"
+                className="grain absolute left-6 bottom-6 rounded-2xl bg-tomato px-6 py-3 shadow-xl"
               >
                 <p className="font-display text-sm font-bold tracking-[0.2em] text-charcoal">
                   OPEN DAILY
@@ -114,7 +114,7 @@ function Contact() {
                   Call us at <strong>{CONTACT.phone}</strong> or stop by — 
                   we're always happy to see you at the barn.
                 </p>
-                <p className="font-display font-bold text-fresh">
+                <p className="font-display font-bold text-tomato">
                   {CONTACT.days} · {CONTACT.hours}
                 </p>
               </motion.div>
@@ -167,7 +167,7 @@ function Contact() {
 
       {/* MAP */}
       <section className="px-5 pb-24 sm:px-8">
-        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] bg-fresh/25">
+        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] bg-sunny/25">
           <div
             className="absolute inset-0 opacity-60"
             style={{
