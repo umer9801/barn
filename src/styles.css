@@ -1,0 +1,200 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * KEMPTVILLE DAIRY BARN — bold roadside food brand design system.
+ * All colors in oklch. Utilities: .grain, .text-stroke, .marquee-track
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 6px);
+  --radius-2xl: calc(var(--radius) + 14px);
+  --radius-3xl: calc(var(--radius) + 26px);
+  --radius-4xl: calc(var(--radius) + 40px);
+
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Brand */
+  --color-cream: var(--cream);
+  --color-warm: var(--warm);
+  --color-tomato: var(--tomato);
+  --color-barn: var(--barn);
+  --color-sunny: var(--sunny);
+  --color-golden: var(--golden);
+  --color-fresh: var(--fresh);
+  --color-cocoa: var(--cocoa);
+  --color-charcoal: var(--charcoal);
+}
+
+:root {
+  --radius: 1.25rem;
+
+  --cream: oklch(0.978 0.017 75);
+  --warm: oklch(0.993 0.007 85);
+  --tomato: oklch(0.556 0.208 27.2);
+  --barn: oklch(0.445 0.185 28);
+  --sunny: oklch(0.845 0.144 82);
+  --golden: oklch(0.769 0.163 70);
+  --fresh: oklch(0.667 0.083 148);
+  --cocoa: oklch(0.312 0.048 30);
+  --charcoal: oklch(0.205 0 0);
+
+  --background: var(--cream);
+  --foreground: var(--charcoal);
+  --card: var(--warm);
+  --card-foreground: var(--charcoal);
+  --popover: var(--warm);
+  --popover-foreground: var(--charcoal);
+  --primary: var(--tomato);
+  --primary-foreground: var(--cream);
+  --secondary: var(--sunny);
+  --secondary-foreground: var(--cocoa);
+  --muted: oklch(0.945 0.02 78);
+  --muted-foreground: oklch(0.48 0.03 40);
+  --accent: var(--golden);
+  --accent-foreground: var(--charcoal);
+  --destructive: var(--barn);
+  --destructive-foreground: var(--cream);
+  --border: oklch(0.89 0.025 70);
+  --input: oklch(0.89 0.025 70);
+  --ring: var(--tomato);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-display {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 0.88;
+    text-wrap: balance;
+  }
+
+  ::selection {
+    background: var(--tomato);
+    color: var(--cream);
+  }
+}
+
+/* Subtle film grain overlay */
+@utility grain {
+  position: relative;
+  isolation: isolate;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.32;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.45'/%3E%3C/svg%3E");
+  }
+}
+
+@utility text-stroke {
+  color: transparent;
+  -webkit-text-stroke: 2px currentColor;
+}
+
+@utility text-stroke-cream {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--cream);
+}
+
+@utility hero-type {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  line-height: 0.82;
+  text-transform: uppercase;
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@keyframes kdb-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@utility marquee-track {
+  display: flex;
+  width: max-content;
+  animation: kdb-marquee var(--marquee-duration, 28s) linear infinite;
+}
+
+@utility marquee-reverse {
+  animation-direction: reverse;
+}
+
+@keyframes kdb-spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@utility spin-slow {
+  animation: kdb-spin-slow 18s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track,
+  .spin-slow {
+    animation: none;
+  }
+}
