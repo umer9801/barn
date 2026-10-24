@@ -1,5 +1,9 @@
 {
   "buildCommand": "npm run build",
   "framework": null,
-  "installCommand": "npm install"
+  "outputDirectory": ".output/public",
+  "installCommand": "npm install",
+  "env": {
+    "DANGEROUSLY_DEPLOY_VULNERABLE_TANSTACK_START_XSS": "1"
+  }
 }
