@@ -97,8 +97,8 @@ export function PizzaDiscountPopup() {
                 transition={{ delay: 0.5 }}
                 className="mb-6 text-center leading-relaxed text-charcoal/80"
               >
-                Get <strong className="text-tomato">40% discount</strong> on all pizza orders 
-                when you order through DoorDash today!
+                Get <strong className="text-fresh">40% discount</strong> on all pizza orders 
+                when you order through Valley Eats today!
               </motion.p>
 
               <motion.div
@@ -108,18 +108,6 @@ export function PizzaDiscountPopup() {
                 className="space-y-3"
               >
                 <a
-                  href={CONTACT.doordashLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={handleClose}
-                  className="grain group flex w-full items-center justify-center gap-3 rounded-full bg-tomato px-8 py-4 font-display text-sm font-bold tracking-[0.2em] text-cream shadow-lg transition-all duration-300 hover:scale-105 hover:bg-barn"
-                >
-                  <ShoppingBag className="size-5" />
-                  ORDER ON DOORDASH
-                  <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
-                </a>
-
-                <a
                   href={CONTACT.valleyEatsLink}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -127,7 +115,19 @@ export function PizzaDiscountPopup() {
                   className="grain group flex w-full items-center justify-center gap-3 rounded-full bg-fresh px-8 py-4 font-display text-sm font-bold tracking-[0.2em] text-cream shadow-lg transition-all duration-300 hover:scale-105 hover:bg-fresh/80"
                 >
                   <ShoppingBag className="size-5" />
-                  ORDER ON VALLEY EATS
+                  ORDER ON VALLEY EATS (40% OFF)
+                  <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
+                </a>
+
+                <a
+                  href={CONTACT.doordashLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={handleClose}
+                  className="grain group flex w-full items-center justify-center gap-3 rounded-full border-2 border-fresh px-8 py-4 font-display text-sm font-bold tracking-[0.2em] text-fresh shadow-lg transition-all duration-300 hover:scale-105 hover:bg-fresh hover:text-cream"
+                >
+                  <ShoppingBag className="size-5" />
+                  ORDER ON DOORDASH
                   <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
                 </a>
 
@@ -145,7 +145,7 @@ export function PizzaDiscountPopup() {
                 transition={{ delay: 0.7 }}
                 className="mt-4 text-center text-xs text-charcoal/50"
               >
-                Limited time offer. Valid on DoorDash orders only.
+                Limited time offer. Valid on Valley Eats orders only.
               </motion.p>
             </div>
           </motion.div>
