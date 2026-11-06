@@ -16,6 +16,9 @@ import img14 from "@/assets/14.jpeg";
 import img15 from "@/assets/15.jpeg";
 import img16 from "@/assets/16.jpeg";
 import img17 from "@/assets/17.jpeg";
+import pizza1 from "@/assets/pizza1.png";
+import pizza2 from "@/assets/pizza2.png";
+import pizza3 from "@/assets/pizza3.png";
 
 const COLLAGE = [
   IMG.softServe, 
@@ -27,11 +30,14 @@ const COLLAGE = [
   img9,
   IMG.fries,
   img10,
+  pizza1,
   img11,
   img12,
+  pizza2,
   img13,
   img14,
   img15,
+  pizza3,
   img16,
   img17
 ];
@@ -67,6 +73,8 @@ function MenuPage() {
     <PageShell>
       <section className="grain relative overflow-hidden bg-cream px-5 pt-36 pb-14 sm:px-8">
         <div className="pointer-events-none absolute -left-32 top-10 size-[28rem] rounded-full bg-tomato/85" />
+        
+        
         <div className="relative z-10 mx-auto max-w-7xl">
           <h1 className="hero-type text-[16vw] leading-[0.82] lg:text-[9.5vw]">
             {["WHAT ARE YOU", "CRAVING?"].map((line, i) => (

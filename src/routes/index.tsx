@@ -430,7 +430,7 @@ function Home() {
           </div>
 
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-            {[img7, img8, img9, img10, img11, img12, img13, img14, img15, img16, img17].map((imgSrc, i) => (
+            {[img7, img8, img9, pizza1, img10, img11, pizza2, img12, img13, img14, pizza3, img15, img16, img17].map((imgSrc, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, scale: 0.9 }}

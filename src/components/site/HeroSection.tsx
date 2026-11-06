@@ -3,6 +3,7 @@ import { useRef } from "react";
 import { ArrowRight, ArrowUpRight, ShoppingBag } from "lucide-react";
 import { IMG, CONTACT } from "@/lib/site-data";
 import { MagneticButton } from "./MagneticButton";
+import pizza2 from "@/assets/pizza2.png";
 
 const float = (delay: number, distance = 18) => ({
   animate: { y: [0, -distance, 0] },
@@ -131,6 +132,13 @@ export function HeroSection() {
             alt=""
             loading="lazy"
             className="absolute -top-6 -left-8 z-20 size-28 rounded-3xl object-cover shadow-xl sm:size-36"
+          />
+          <motion.img
+            {...float(0.9, 20)}
+            src={pizza2}
+            alt=""
+            loading="lazy"
+            className="absolute top-8 -right-12 z-20 size-24 rounded-2xl object-contain shadow-xl sm:size-32"
           />
           <motion.img
             {...float(1.2, 24)}

@@ -405,6 +405,56 @@ function About() {
           </a>
         </div>
       </section>
+
+      {/* PHOTO GALLERY */}
+      <section className="bg-warm px-5 py-24 sm:px-8 lg:py-32">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-16 text-center">
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="font-display text-sm font-bold tracking-[0.3em] text-tomato"
+            >
+              CAPTURED MOMENTS
+            </motion.span>
+            
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="hero-type mt-6 text-[10vw] leading-[0.9] text-charcoal sm:text-6xl lg:text-7xl"
+            >
+              MEMORIES
+              <br />
+              <span className="text-tomato">IN THE MAKING.</span>
+            </motion.h2>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+            {[img1, img2, pizza1, img3, img4, img5, pizza2, img6, img7, img8, pizza3, img9, img10, img11, img12, img13, img14, img15, img16, img17].map((imgSrc, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, scale: 0.85, rotate: i % 2 === 0 ? -3 : 3 }}
+                whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                whileHover={{ scale: 1.08, rotate: 0, zIndex: 10 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.04 }}
+                className="aspect-square overflow-hidden rounded-3xl shadow-lg"
+              >
+                <img
+                  src={imgSrc}
+                  alt={`Memories from the barn ${i + 1}`}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition-transform duration-300 hover:scale-110"
+                />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
     </PageShell>
   );
 }
