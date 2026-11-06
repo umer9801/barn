@@ -31,9 +31,6 @@ import friesImg from "@/assets/fries.jpeg";
 import pizza1 from "@/assets/pizza1.png";
 import pizza2 from "@/assets/pizza2.png";
 import pizza3 from "@/assets/pizza3.png";
-import pizza1 from "@/assets/pizza1.png";
-import pizza2 from "@/assets/pizza2.png";
-import pizza3 from "@/assets/pizza3.png";
 import hotdogImg from "@/assets/hotdog.jpg";
 import milkshakeImg from "@/assets/milkshake.jpg";
 
