@@ -51,7 +51,7 @@ export function HeroSection() {
           </motion.p>
 
           <h1 className="hero-type text-[12vw] leading-[0.88] sm:text-[9vw] lg:text-[5.2vw]">
-            {["SCOOPS OF", "HAPPINESS,", "ONE CONE", "AT A TIME."].map((line, i) => (
+            {["ICE CREAM.", "BURGERS.", "PIZZA.", "POUTINE."].map((line, i) => (
               <span key={line} className="block overflow-hidden">
                 <motion.span
                   className="block"
@@ -59,7 +59,7 @@ export function HeroSection() {
                   animate={{ y: 0 }}
                   transition={{ duration: 0.9, delay: 0.15 + i * 0.1, ease: [0.22, 1, 0.36, 1] }}
                 >
-                  {i === 3 ? <span className="text-cream drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">{line}</span> : line}
+                  {line}
                 </motion.span>
               </span>
             ))}
@@ -72,10 +72,12 @@ export function HeroSection() {
             className="mt-7 max-w-lg space-y-3"
           >
             <p className="text-lg font-display font-bold italic text-charcoal/90 border-l-4 border-tomato pl-4">
-              "Where every meal is made fresh, and every visit feels like home."
+              "Not just ice cream — we've got burgers, poutine, pizza, sandwiches, 
+              fresh-cut fries, cold drinks, and everything you crave."
             </p>
             <p className="text-base leading-relaxed text-muted-foreground pl-4">
-              Fresh soft serve, loaded poutine, juicy burgers, and all your roadside favourites.
+              Whatever you're craving, we've got it waiting at the barn. 
+              Made fresh, served with a smile.
             </p>
           </motion.div>
 
@@ -95,10 +97,19 @@ export function HeroSection() {
               className="grain group inline-flex items-center gap-2 rounded-full bg-tomato px-8 py-4 font-display text-sm font-bold tracking-[0.2em] text-cream shadow-lg transition-all duration-300 hover:scale-105 hover:bg-barn hover:shadow-xl"
             >
               <ShoppingBag className="size-4" />
-              ORDER ON DOORDASH
+              DOORDASH
+            </a>
+            <a
+              href={CONTACT.valleyEatsLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="grain group inline-flex items-center gap-2 rounded-full bg-fresh px-8 py-4 font-display text-sm font-bold tracking-[0.2em] text-cream shadow-lg transition-all duration-300 hover:scale-105 hover:bg-fresh/80 hover:shadow-xl"
+            >
+              <ShoppingBag className="size-4" />
+              VALLEY EATS
             </a>
             <MagneticButton to="/contact" variant="outline">
-              Find us <ArrowRight className="size-4" />
+              Order now <ArrowRight className="size-4" />
             </MagneticButton>
           </motion.div>
         </div>

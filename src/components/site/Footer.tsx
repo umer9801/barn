@@ -35,7 +35,7 @@ export function Footer() {
                 { label: "HOME", to: "/" },
                 { label: "ABOUT", to: "/about" },
                 { label: "MENU", to: "/menu" },
-                { label: "CONTACT", to: "/contact" },
+                { label: "ORDER NOW", to: "/contact" },
               ].map((l) => (
                 <li key={l.to}>
                   <Link to={l.to} className="transition-opacity hover:opacity-60">

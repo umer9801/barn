@@ -8,6 +8,7 @@ import { StorySection } from "@/components/site/StorySection";
 import { SignatureFoodCard } from "@/components/site/SignatureFoodCard";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { ContentCard } from "@/components/site/ContentCard";
+import { PizzaDiscountPopup } from "@/components/site/PizzaDiscountPopup";
 import { Clock, MapPin, Sparkles, Users, ShoppingBag, ArrowRight } from "lucide-react";
 import { IMG, SIGNATURES, CONTACT } from "@/lib/site-data";
 import img7 from "@/assets/7.jpeg";
@@ -55,6 +56,7 @@ function Home() {
 
   return (
     <PageShell>
+      <PizzaDiscountPopup />
       <HeroSection />
 
       {/* MARQUEE */}
@@ -469,8 +471,8 @@ function Home() {
             />
             
             <ContentCard
-              title="BURGERS & DOGS"
-              description={`"Smashed patties, melted cheese, grilled to perfection." — Classic roadside done right, every single time.`}
+              title="BURGERS & PIZZA"
+              description={`"Smashed patties, melted cheese, hot pizza slices." — Classic comfort food done the right way.`}
               variant="tomato"
               delay={0.08}
             />
@@ -488,16 +490,26 @@ function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-16 text-center"
+            className="mt-16 flex flex-wrap items-center justify-center gap-4"
           >
             <a
               href={CONTACT.doordashLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="grain group inline-flex items-center gap-3 rounded-full bg-tomato px-10 py-5 font-display text-base font-bold tracking-[0.2em] text-cream shadow-xl transition-all duration-300 hover:scale-105 hover:bg-sunny"
+              className="grain group inline-flex items-center gap-3 rounded-full bg-tomato px-10 py-5 font-display text-base font-bold tracking-[0.2em] text-cream shadow-xl transition-all duration-300 hover:scale-105 hover:bg-barn"
             >
               <ShoppingBag className="size-5" />
-              ORDER NOW WITH DOORDASH
+              ORDER WITH DOORDASH
+              <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
+            </a>
+            <a
+              href={CONTACT.valleyEatsLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="grain group inline-flex items-center gap-3 rounded-full bg-fresh px-10 py-5 font-display text-base font-bold tracking-[0.2em] text-cream shadow-xl transition-all duration-300 hover:scale-105 hover:bg-fresh/80"
+            >
+              <ShoppingBag className="size-5" />
+              ORDER WITH VALLEY EATS
               <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
             </a>
           </motion.div>

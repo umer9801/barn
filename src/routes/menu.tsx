@@ -87,7 +87,7 @@ function MenuPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="mt-10 text-center"
+            className="mt-10 flex flex-wrap items-center justify-center gap-4"
           >
             <a
               href={CONTACT.doordashLink}
@@ -97,6 +97,17 @@ function MenuPage() {
             >
               <ShoppingBag className="size-5" />
               ORDER WITH DOORDASH
+              <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+            </a>
+            
+            <a
+              href={CONTACT.valleyEatsLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="grain group inline-flex items-center gap-3 rounded-full bg-fresh px-8 py-4 font-display text-sm font-bold tracking-[0.2em] text-cream shadow-xl transition-all duration-300 hover:scale-105 hover:bg-fresh/80"
+            >
+              <ShoppingBag className="size-5" />
+              ORDER WITH VALLEY EATS
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
             </a>
           </motion.div>

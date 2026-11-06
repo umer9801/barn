@@ -8,7 +8,7 @@ const LINKS = [
   { label: "HOME", to: "/", img: IMG.softServe },
   { label: "ABOUT", to: "/about", img: IMG.barn },
   { label: "MENU", to: "/menu", img: IMG.burger },
-  { label: "CONTACT", to: "/contact", img: IMG.milkshake },
+  { label: "ORDER NOW", to: "/contact", img: IMG.milkshake },
 ];
 
 export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => void }) {

@@ -11,7 +11,7 @@ const LINKS = [
   { label: "HOME", to: "/" },
   { label: "ABOUT", to: "/about" },
   { label: "MENU", to: "/menu" },
-  { label: "CONTACT", to: "/contact" },
+  { label: "ORDER NOW", to: "/contact" },
 ] as const;
 
 export function Navbar() {
