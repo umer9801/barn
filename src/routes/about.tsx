@@ -28,6 +28,12 @@ import img17 from "@/assets/17.jpeg";
 import homeImg from "@/assets/home.jpg";
 import home2Img from "@/assets/home2.jpg";
 import friesImg from "@/assets/fries.jpeg";
+import pizza1 from "@/assets/pizza1.png";
+import pizza2 from "@/assets/pizza2.png";
+import pizza3 from "@/assets/pizza3.png";
+import pizza1 from "@/assets/pizza1.png";
+import pizza2 from "@/assets/pizza2.png";
+import pizza3 from "@/assets/pizza3.png";
 import hotdogImg from "@/assets/hotdog.jpg";
 import milkshakeImg from "@/assets/milkshake.jpg";
 

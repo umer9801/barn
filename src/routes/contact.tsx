@@ -9,6 +9,9 @@ import img8 from "@/assets/8.jpeg";
 import img9 from "@/assets/9.jpeg";
 import img10 from "@/assets/10.jpeg";
 import img11 from "@/assets/11.jpeg";
+import pizza1 from "@/assets/pizza1.png";
+import pizza2 from "@/assets/pizza2.png";
+import pizza3 from "@/assets/pizza3.png";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -74,6 +77,32 @@ function Contact() {
           animate={{ y: [0, 15, 0], rotate: [-2, 2, -2] }}
           transition={{ duration: 6.5, repeat: Infinity, ease: "easeInOut" }}
           className="absolute bottom-32 left-20 size-24 rounded-2xl object-cover shadow-lg hidden lg:block opacity-80"
+        />
+        
+        {/* Floating Pizza Images */}
+        <motion.img
+          src={pizza1}
+          alt=""
+          loading="lazy"
+          animate={{ y: [0, -12, 0], rotate: [5, -5, 5] }}
+          transition={{ duration: 7.5, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-40 right-32 w-28 h-28 object-contain opacity-30 pointer-events-none hidden lg:block"
+        />
+        <motion.img
+          src={pizza2}
+          alt=""
+          loading="lazy"
+          animate={{ y: [0, 18, 0], rotate: [-4, 4, -4] }}
+          transition={{ duration: 8.5, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute bottom-40 right-10 w-32 h-32 object-contain opacity-25 pointer-events-none hidden lg:block"
+        />
+        <motion.img
+          src={pizza3}
+          alt=""
+          loading="lazy"
+          animate={{ y: [0, -15, 0], rotate: [3, -3, 3] }}
+          transition={{ duration: 6.8, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-60 left-32 w-24 h-24 object-contain opacity-30 pointer-events-none hidden lg:block"
         />
         
         <div className="relative z-10 mx-auto max-w-4xl text-center">

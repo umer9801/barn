@@ -22,6 +22,9 @@ import img14 from "@/assets/14.jpeg";
 import img15 from "@/assets/15.jpeg";
 import img16 from "@/assets/16.jpeg";
 import img17 from "@/assets/17.jpeg";
+import pizza1 from "@/assets/pizza1.png";
+import pizza2 from "@/assets/pizza2.png";
+import pizza3 from "@/assets/pizza3.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -70,8 +73,26 @@ function Home() {
       <StorySection />
 
       {/* CONTENT CARDS - WHY VISIT US */}
-      <section className="bg-warm px-5 py-24 sm:px-8 lg:py-32">
-        <div className="mx-auto max-w-7xl">
+      <section className="bg-warm px-5 py-24 sm:px-8 lg:py-32 relative overflow-hidden">
+        {/* Floating Pizza Images */}
+        <motion.img
+          src={pizza1}
+          alt=""
+          loading="lazy"
+          animate={{ y: [0, -20, 0], rotate: [-5, 5, -5] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-10 right-10 w-32 h-32 object-contain opacity-20 pointer-events-none hidden lg:block"
+        />
+        <motion.img
+          src={pizza2}
+          alt=""
+          loading="lazy"
+          animate={{ y: [0, 15, 0], rotate: [3, -3, 3] }}
+          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute bottom-20 left-10 w-28 h-28 object-contain opacity-20 pointer-events-none hidden lg:block"
+        />
+        
+        <div className="mx-auto max-w-7xl relative z-10">
           <SectionHeading 
             eyebrow="Why families love us" 
             lines={["A TRADITION", "WORTH KEEPING."]} 
@@ -270,8 +291,26 @@ function Home() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="bg-cream px-5 py-24 sm:px-8 lg:py-32">
-        <div className="mx-auto max-w-7xl">
+      <section className="bg-cream px-5 py-24 sm:px-8 lg:py-32 relative overflow-hidden">
+        {/* Floating Pizza Images */}
+        <motion.img
+          src={pizza3}
+          alt=""
+          loading="lazy"
+          animate={{ y: [0, -18, 0], rotate: [4, -4, 4] }}
+          transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-20 left-5 w-36 h-36 object-contain opacity-15 pointer-events-none hidden lg:block"
+        />
+        <motion.img
+          src={pizza1}
+          alt=""
+          loading="lazy"
+          animate={{ y: [0, 12, 0], rotate: [-3, 3, -3] }}
+          transition={{ duration: 6.5, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute bottom-10 right-20 w-32 h-32 object-contain opacity-15 pointer-events-none hidden lg:block"
+        />
+        
+        <div className="mx-auto max-w-7xl relative z-10">
           <div className="mb-16 text-center">
             <motion.span
               initial={{ opacity: 0, y: 20 }}

@@ -8,6 +8,9 @@ import sundae from "@/assets/3.jpg";
 import drinks from "@/assets/home2.jpg";
 import barn from "@/assets/6.jpeg";
 import people from "@/assets/home.jpg";
+import pizza1 from "@/assets/pizza1.png";
+import pizza2 from "@/assets/pizza2.png";
+import pizza3 from "@/assets/pizza3.png";
 
 export const IMG = {
   softServe,
@@ -20,6 +23,9 @@ export const IMG = {
   drinks,
   barn,
   people,
+  pizza1,
+  pizza2,
+  pizza3,
 };
 
 export const CONTACT = {
