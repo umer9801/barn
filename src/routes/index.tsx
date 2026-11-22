@@ -9,6 +9,7 @@ import { SignatureFoodCard } from "@/components/site/SignatureFoodCard";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { ContentCard } from "@/components/site/ContentCard";
 import { PizzaDiscountPopup } from "@/components/site/PizzaDiscountPopup";
+import { DirectOrderDiscountPopup } from "@/components/site/DirectOrderDiscountPopup";
 import { Clock, MapPin, Sparkles, Users, ShoppingBag, ArrowRight } from "lucide-react";
 import { IMG, SIGNATURES, CONTACT } from "@/lib/site-data";
 import img7 from "@/assets/7.jpeg";
@@ -60,6 +61,7 @@ function Home() {
   return (
     <PageShell>
       <PizzaDiscountPopup />
+      <DirectOrderDiscountPopup />
       <HeroSection />
 
       {/* MARQUEE */}
