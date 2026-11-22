@@ -4,6 +4,7 @@ import { useMemo } from "react";
 import { ShoppingBag, ArrowRight } from "lucide-react";
 import { PageShell } from "@/components/site/PageShell";
 import { TextMenuSection } from "@/components/site/TextMenuSection";
+import { DirectOrderDiscountBanner } from "@/components/site/DirectOrderDiscountBanner";
 import { IMG, MENU, CATEGORIES, CONTACT } from "@/lib/site-data";
 import img7 from "@/assets/7.jpeg";
 import img8 from "@/assets/8.jpeg";

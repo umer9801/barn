@@ -10,6 +10,7 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 import { ContentCard } from "@/components/site/ContentCard";
 import { PizzaDiscountPopup } from "@/components/site/PizzaDiscountPopup";
 import { DirectOrderDiscountPopup } from "@/components/site/DirectOrderDiscountPopup";
+import { DirectOrderDiscountBanner } from "@/components/site/DirectOrderDiscountBanner";
 import { Clock, MapPin, Sparkles, Users, ShoppingBag, ArrowRight } from "lucide-react";
 import { IMG, SIGNATURES, CONTACT } from "@/lib/site-data";
 import img7 from "@/assets/7.jpeg";
@@ -68,6 +69,7 @@ function Home() {
       <div className="grain bg-tomato text-cream">
         <Marquee items={MARQUEE} duration={34} />
       </div>
+      <DirectOrderDiscountBanner />
       <div className="grain border-y-2 border-charcoal/10 bg-cream text-charcoal">
         <Marquee items={MARQUEE} duration={40} reverse />
       </div>
