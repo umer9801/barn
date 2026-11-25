@@ -46,7 +46,7 @@ export function DirectOrderDiscountBanner() {
         {/* Right CTA */}
         <div className="flex items-center gap-3">
           <a
-            href="tel:+16137161606"
+            href="tel:+16132587000"
             className="grain hidden sm:flex items-center gap-2 rounded-full bg-cream px-6 py-3 font-display font-bold text-sm tracking-[0.1em] text-fresh hover:scale-105 transition-transform duration-300 shadow-lg whitespace-nowrap"
           >
             <Phone className="size-4" />
@@ -55,7 +55,7 @@ export function DirectOrderDiscountBanner() {
 
           {/* Mobile button */}
           <a
-            href="tel:+16137161606"
+            href="tel:+16132587000"
             className="sm:hidden rounded-full bg-cream p-3 hover:scale-110 transition-transform duration-300 shadow-lg"
           >
             <Phone className="size-5 text-fresh" />

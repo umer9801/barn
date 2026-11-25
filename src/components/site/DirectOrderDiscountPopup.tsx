@@ -69,10 +69,10 @@ export function DirectOrderDiscountPopup() {
               <div className="mb-6 rounded-2xl bg-tomato/10 p-4">
                 <p className="text-sm font-bold text-tomato mb-1">📞 Order Now</p>
                 <a
-                  href="tel:+16137161606"
+                  href="tel:+16132587000"
                   className="text-lg font-bold text-charcoal hover:text-tomato transition-colors"
                 >
-                  +1 613-716-1606
+                  +1 613 258 7000
                 </a>
               </div>
 
